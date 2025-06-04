@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private string S_LevelB;
     [SerializeField] private string S_LevelC;
     [SerializeField] private string S_LevelD;
+    public string S_LevelLoad;
 
     public void LoadLevelA()
     {
@@ -35,6 +36,13 @@ public class ButtonManager : MonoBehaviour
         FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1;
         SceneManager.LoadScene(S_LevelD);
+    }
+
+    public void ContinueLevel()
+    {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
+        Time.timeScale = 1;
+        SceneManager.LoadScene(S_LevelLoad);
     }
 
     public void RestartLevel()
