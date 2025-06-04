@@ -9,6 +9,7 @@ public class FinalObject : MonoBehaviour, IPointerDownHandler
     [SerializeField] GameObject TurnThisOn;
     [SerializeField] Image TurnThisOff;
 
+    public Image FadePanel;
     public bool SceneEnded;
     public string CurrentScene;
     public string NextScene;
@@ -18,11 +19,18 @@ public class FinalObject : MonoBehaviour, IPointerDownHandler
         SceneEnded = true;
         TurnThisOn.SetActive(true);
         TurnThisOff.enabled = false;
+        if (CurrentScene == "07 EndCreditsScene")
+        {
+            FadePanel.enabled = true;
+            FindObjectOfType<FadeScene>().FadeToScene(NextScene);
+        }
     }
 
     private void Start()
     {
         CurrentScene = SceneManager.GetActiveScene().name;
+        FadePanel = GameObject.Find("FadePanel").GetComponent<UnityEngine.UI.Image>();
+
         if (CurrentScene == "04 Level01")
         {
             NextScene = "05 Level02";
@@ -32,6 +40,10 @@ public class FinalObject : MonoBehaviour, IPointerDownHandler
             NextScene = "06 Level03";
         }
         if (CurrentScene == "06 Level03")
+        {
+            NextScene = "07 EndCreditsScene";
+        }
+        if (CurrentScene == "07 EndCreditsScene")
         {
             NextScene = "01 StartScene";
         }
@@ -43,7 +55,8 @@ public class FinalObject : MonoBehaviour, IPointerDownHandler
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene(NextScene);
+                FadePanel.enabled = true;
+                FindObjectOfType<FadeScene>().FadeToScene(NextScene);
             }
         }
     }
