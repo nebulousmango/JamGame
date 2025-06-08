@@ -6,13 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class FinalObject : MonoBehaviour, IPointerDownHandler
 {
+    // Attached to final Int objects in Level scenes.
+
     public bool SceneEnded;
     public string CurrentScene;
     public string NextScene;
+    [SerializeField] GameObject[] TurnThisOn;
 
     public void OnPointerDown(PointerEventData eventData)
     {
         SceneEnded = true;
+        for (int i = 0; i < TurnThisOn.Length; i++)
+        {
+            TurnThisOn[i].SetActive(true);
+        }
     }
 
     private void Start()

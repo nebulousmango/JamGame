@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Sheep : MonoBehaviour
 {
+    // Attached to Item (5) object in 02 Level01.
+
     public int SheepCount;
     [SerializeField] GameObject[] TurnThisOn;
 

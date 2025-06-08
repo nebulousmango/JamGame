@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ClickObject : MonoBehaviour, IPointerDownHandler, IPointerExitHandler, IPointerEnterHandler
 {
+    // Attached to Int objects in Level scenes.
+
     [SerializeField] GameObject[] TurnThisOn;
     [SerializeField] GameObject[] TurnThisOff;
     private bool MouseHover;
