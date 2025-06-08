@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
-    // Attached to DontDestroy object in 00_StartMenu scene.
+    // Attached to DontDestroy object in 01_StartMenu scene.
 
     public static DontDestroy Instance;
 

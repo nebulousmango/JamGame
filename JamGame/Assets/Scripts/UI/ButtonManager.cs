@@ -13,41 +13,35 @@ public class ButtonManager : MonoBehaviour
 
     public void LoadLevelA()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1;
         SceneManager.LoadScene(S_LevelA);
     }
 
     public void LoadLevelB()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1;
         SceneManager.LoadScene(S_LevelB);
     }
 
     public void LoadLevelC()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1;
         SceneManager.LoadScene(S_LevelC);
     }
     public void LoadLevelD()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1;
         SceneManager.LoadScene(S_LevelD);
     }
 
     public void ContinueLevel()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1;
         SceneManager.LoadScene(S_LevelLoad);
     }
 
     public void RestartLevel()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1;
         FindObjectOfType<PauseMenu>().ChangePauseBool();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -55,7 +49,6 @@ public class ButtonManager : MonoBehaviour
 
     public void QuitGame()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Button");
         Application.Quit();
     }
 }

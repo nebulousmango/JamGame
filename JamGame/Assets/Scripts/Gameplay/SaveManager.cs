@@ -25,25 +25,25 @@ public class SaveManager : MonoBehaviour
         if (CurrentScene == "01 StartScene")
         {
             PlayerPrefsLevelsCompletedInt = PlayerPrefs.GetInt("LevelsCompletedInt");
-            if (PlayerPrefsLevelsCompletedInt == 1) LevelLoad = "05 Level02";
-            if (PlayerPrefsLevelsCompletedInt == 2) LevelLoad = "06 Level03";
+            if (PlayerPrefsLevelsCompletedInt == 1) LevelLoad = "03 Level02";
+            if (PlayerPrefsLevelsCompletedInt == 2) LevelLoad = "04 Level03";
         }
-        if (CurrentScene == "04 Level01")
+        if (CurrentScene == "02 Level01")
         {
             PlayerPrefs.SetInt("LevelsCompletedInt", 0);
             PlayerPrefs.Save();
         }
-        if (CurrentScene == "05 Level02")
+        if (CurrentScene == "03 Level02")
         {
             PlayerPrefs.SetInt("LevelsCompletedInt", 1);
             PlayerPrefs.Save();
-            LevelLoad = "05 Level02";
+            LevelLoad = "03 Level02";
         }
-        if (CurrentScene == "06 Level03")
+        if (CurrentScene == "04 Level03")
         {
             PlayerPrefs.SetInt("LevelsCompletedInt", 2);
             PlayerPrefs.Save();
-            LevelLoad = "06 Level03";
+            LevelLoad = "04 Level03";
         }
     }
 }

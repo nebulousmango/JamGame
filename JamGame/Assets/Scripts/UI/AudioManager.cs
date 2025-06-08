@@ -5,7 +5,7 @@ using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
-    // Attached to AudioManager object in 00_StartMenu scene.
+    // Attached to AudioManager object in 01_StartMenu scene.
 
     public SoundData[] soundsData;
 
