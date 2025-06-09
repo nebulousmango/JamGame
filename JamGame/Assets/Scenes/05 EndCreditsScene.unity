@@ -1150,6 +1150,7 @@ GameObject:
   - component: {fileID: 1701436728}
   - component: {fileID: 1701436727}
   - component: {fileID: 1701436729}
+  - component: {fileID: 1701436730}
   m_Layer: 5
   m_Name: SplashUI
   m_TagString: Untagged
@@ -1227,6 +1228,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab6cf0fcdc250e4c8494a6b358bbc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1701436730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701436725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f2c1e4fb53fb84f9bc6877ad3a9ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentScene: 
+  NextScene: 
 --- !u!1 &1950255143
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,5 +47,11 @@ public class SaveManager : MonoBehaviour
             PlayerPrefs.Save();
             LevelLoad = "04 Level03";
         }
+        if (CurrentScene == "05 EndCreditsScene")
+        {
+            PlayerPrefs.SetInt("LevelsCompletedInt", 3);
+            PlayerPrefs.Save();
+            LevelLoad = "01 StartScene";
+        }
     }
 }
