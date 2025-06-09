@@ -4201,7 +4201,7 @@ MonoBehaviour:
   - AudioSource: {fileID: 0}
     S_Name: Alarm_Lvl2
     AudioClip: {fileID: 8300000, guid: 9ae11ebf60be8614cb3d8cbbe924a03d, type: 3}
-    F_Volume: 1
+    F_Volume: 0.4
     B_PlayOnAwake: 0
     B_Loop: 0
   - AudioSource: {fileID: 0}

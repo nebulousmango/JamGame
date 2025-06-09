@@ -3,13 +3,12 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ClickObject : MonoBehaviour, IPointerDownHandler, IPointerExitHandler, IPointerEnterHandler
+public class ClickObject : MonoBehaviour, IPointerDownHandler
 {
     // Attached to Int objects in Level scenes.
 
     [SerializeField] GameObject[] TurnThisOn;
     [SerializeField] GameObject[] TurnThisOff;
-    private bool MouseHover;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -21,23 +20,5 @@ public class ClickObject : MonoBehaviour, IPointerDownHandler, IPointerExitHandl
         {
             TurnThisOff[i].SetActive(false);
         }
-    }
-
-    void Update()
-    {
-        if (MouseHover) this.OnPointerOver();
-    }
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        MouseHover = true;
-    }
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        MouseHover = false;
-    }
-
-    private void OnPointerOver()
-    {
     }
 }

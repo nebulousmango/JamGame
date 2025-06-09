@@ -8,6 +8,7 @@ public class Sheep : MonoBehaviour
 
     public int SheepCount;
     [SerializeField] GameObject[] TurnThisOn;
+    [SerializeField] GameObject[] TurnThisOff;
 
     private void Update()
     {
@@ -17,6 +18,10 @@ public class Sheep : MonoBehaviour
             {
                 TurnThisOn[i].SetActive(true);
                 SheepCount = 0;
+            }
+            for (int i = 0; i < TurnThisOff.Length; i++)
+            {
+                TurnThisOff[i].SetActive(false);
             }
         }
     }

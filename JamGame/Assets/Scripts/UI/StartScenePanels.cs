@@ -42,8 +42,8 @@ public class StartScenePanels : MonoBehaviour
         {
             TitlePanel.SetActive(false);
             MainPanels.SetActive(true);
-            NewGamePanel.SetActive(false);
-            ContinueGamePanel.SetActive(true);
+            NewGamePanel.SetActive(true);
+            ContinueGamePanel.SetActive(false);
             FindObjectOfType<ButtonManager>().S_LevelLoad = LevelLoad;
             Splash3.SetActive(true);
         }
