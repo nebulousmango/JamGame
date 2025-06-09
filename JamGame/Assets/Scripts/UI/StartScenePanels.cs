@@ -6,7 +6,6 @@ public class StartScenePanels : MonoBehaviour
 {
     // Attached to Canvas object in 01 StartScene.
 
-    public GameObject TitlePanel;
     public GameObject MainPanels;
     public GameObject ContinueGamePanel;
     public GameObject NewGamePanel;
@@ -23,15 +22,13 @@ public class StartScenePanels : MonoBehaviour
 
         if (PlayerPrefsLevelsCompletedInt == 0)
         {
-            TitlePanel.SetActive(true);
-            MainPanels.SetActive(false);
-            ContinueGamePanel.SetActive(false);
+            MainPanels.SetActive(true);
             NewGamePanel.SetActive(true);
+            ContinueGamePanel.SetActive(false);
             Splash1.SetActive(true);
         }
         if (PlayerPrefsLevelsCompletedInt == 1)
         {
-            TitlePanel.SetActive(false);
             MainPanels.SetActive(true);
             NewGamePanel.SetActive(false);
             ContinueGamePanel.SetActive(true);
@@ -40,7 +37,6 @@ public class StartScenePanels : MonoBehaviour
         }
         if (PlayerPrefsLevelsCompletedInt == 2)
         {
-            TitlePanel.SetActive(false);
             MainPanels.SetActive(true);
             NewGamePanel.SetActive(false);
             ContinueGamePanel.SetActive(true);
@@ -49,7 +45,6 @@ public class StartScenePanels : MonoBehaviour
         }
         if (PlayerPrefsLevelsCompletedInt == 3)
         {
-            TitlePanel.SetActive(false);
             MainPanels.SetActive(true);
             NewGamePanel.SetActive(true);
             ContinueGamePanel.SetActive(false);

@@ -24,6 +24,10 @@ public class SaveManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         CurrentScene = SceneManager.GetActiveScene().name;
+        if (CurrentScene == "00 TitleScene")
+        {
+            PlayerPrefsLevelsCompletedInt = PlayerPrefs.GetInt("LevelsCompletedInt");
+        }
         if (CurrentScene == "01 StartScene")
         {
             PlayerPrefsLevelsCompletedInt = PlayerPrefs.GetInt("LevelsCompletedInt");
